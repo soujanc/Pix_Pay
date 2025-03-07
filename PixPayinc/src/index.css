@@ -1,0 +1,116 @@
+@import 'tailwindcss';
+/* Plugins are imported with a different syntax */
+@plugin "tailwindcss-animate";
+
+@font-face {
+  font-family: 'Timmana-Regular';
+  src: url('./assets/fonts/Timmana-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi-Light';
+  src:
+    url('./assets/fonts/Satoshi-Light.woff2') format('woff2'),
+    url('./assets/fonts/Satoshi-Light.woff') format('woff'),
+    url('./assets/fonts/Satoshi-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi-Regular';
+  src:
+    url('./assets/fonts/Satoshi-Regular.woff2') format('woff2'),
+    url('./assets/fonts/Satoshi-Regular.woff') format('woff'),
+    url('./assets/fonts/Satoshi-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi-Medium';
+  src:
+    url('./assets/fonts/Satoshi-Medium.woff2') format('woff2'),
+    url('./assets/fonts/Satoshi-Medium.woff') format('woff'),
+    url('./assets/fonts/Satoshi-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi-Bold';
+  src:
+    url('./assets/fonts/Satoshi-Bold.woff2') format('woff2'),
+    url('./assets/fonts/Satoshi-Bold.woff') format('woff'),
+    url('./assets/fonts/Satoshi-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi-Variable';
+  src:
+    url('./assets/fonts/Satoshi-Variable.woff2') format('woff2'),
+    url('./assets/fonts/Satoshi-Variable.woff') format('woff'),
+    url('./assets/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'DMSerifDisplay';
+  src: url('./assets/fonts/DMSerifDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NovaSquare';
+  src: url('./assets/fonts/NovaSquare-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JosefinSlab';
+  src: url('./assets/fonts/JosefinSlab-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@theme {
+  --color-primary: #f59e0b;
+  --font-satoshi-light: 'Satoshi-Light', 'sans-serif';
+  --font-satoshi-regular: 'Satoshi-Regular', 'sans-serif';
+  --font-satoshi-medium: 'Satoshi-Medium', 'sans-serif';
+  --font-satoshi-bold: 'Satoshi-Bold', 'sans-serif';
+  --font-satoshi-variable: 'Satoshi-Variable', 'sans-serif';
+  --font-timmana-regular: 'Timmana-Regular', 'sans-serif';
+  --font-dmserifdisplay: 'DMSerifDisplay', 'serif';
+  --font-novasquare: 'NovaSquare', 'serif';
+  --font-josefinslab: 'JosefinSlab', 'serif';
+
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    75% {
+      transform: translateX(5px);
+    }
+  }
+}
+
+/* Animation utility class */
+@layer utilities {
+  .animate-wiggle {
+    animation: wiggle 0.2s ease-in-out;
+  }
+}
