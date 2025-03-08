@@ -33,6 +33,7 @@ bash
 CopyInsert
 git clone https://github.com/yourusername/PixPay.git  
 cd PixPay  
+
 2️⃣ Install dependencies
 
 bash
