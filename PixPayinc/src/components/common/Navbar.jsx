@@ -2,18 +2,17 @@ import { useEffect, useState } from 'react'
 import React from 'react'
 import Button from './Button'
 import { Menu, X } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const navigate = useNavigate()
   const navLinks = [
     { name: 'Pricing', href: '#pricing' },
     { name: 'About', href: '#about' },
     { name: 'Customer', href: '#customer' },
     { name: 'Contact Us', href: '#contact' },
   ]
-  const handleClick = () => {
-    console.log('Button clicked')
-  }
 
   return (
     <nav className="sticky z-50 top-0 bg-[#F5F9FA]">
@@ -45,7 +44,10 @@ export default function Navbar() {
           </div>
           {/* Get Started Button */}
           <div className="hidden sm:block">
-            <Button variant="filledNoHover" onClick={handleClick}>
+            <Button
+              variant="filledNoHover"
+              onClick={() => navigate('/getstarted')}
+            >
               Get Started
             </Button>
           </div>
@@ -91,7 +93,7 @@ export default function Navbar() {
           <div className="my-2 p-4">
             <Button
               hoverEffect={false}
-              onClick={handleClick}
+              onClick={() => navigate('/getstarted')}
               className="w-full"
             >
               Get Started
